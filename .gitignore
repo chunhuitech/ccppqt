@@ -1,0 +1,7 @@
+
+#folder
+build-MyTestPros-Desktop_Qt_5_5_1_MSVC2013_32bit-Debug/
+
+
+#ignore thumbnails created by windows
+Thumbs.db
