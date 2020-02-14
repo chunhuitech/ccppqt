@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>firemail: 建议85</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">firemail
+   &#160;<span id="projectnumber">master</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">建议85</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>针对函数的每个参数，编译器都要为其生成一个临时副本  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga1f667db8d76c5e8eb0514deb7d4715a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658.html#ga1f667db8d76c5e8eb0514deb7d4715a9">CMemAlloc::GetMemory1</a> (char *pStr, int num)</td></tr>
+<tr class="memdesc:ga1f667db8d76c5e8eb0514deb7d4715a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">错误的指针分配内存方法  <a href="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658.html#ga1f667db8d76c5e8eb0514deb7d4715a9">更多...</a><br /></td></tr>
+<tr class="separator:ga1f667db8d76c5e8eb0514deb7d4715a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga232640334d146ddbd6cb5d0094d74cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658.html#ga232640334d146ddbd6cb5d0094d74cbb">CMemAlloc::GetMemory2</a> (char **pStr, int num)</td></tr>
+<tr class="memdesc:ga232640334d146ddbd6cb5d0094d74cbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetMemory2 taking two arguments and returning void value.  <a href="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658.html#ga232640334d146ddbd6cb5d0094d74cbb">更多...</a><br /></td></tr>
+<tr class="separator:ga232640334d146ddbd6cb5d0094d74cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>针对函数的每个参数，编译器都要为其生成一个临时副本 </p>
+<p>GetMemory1 并没有使pStr获得期望的内存，pStr依然为NULL,<br  />
+我们分析一下参数的传递过程，从中找出问题所在：<br  />
+针对函数的每个参数，编译器都要为其生成一个临时副本,指针pStr的副本是_pStr,并且会使_pStr = pStr = 0x00000000. <br  />
+在函数体内的程序修改了_pStr的内容，也就是改变了_pStr指向的内存地址，而pStr却丝毫未变，仍旧是0x00000000.<br  />
+所以GetMemory1不能输出任何东西。不仅如此，每执行一次还会造成一次内存的泄露.<br  />
+为什么"指向指针的指针"就能实现预想的功能呢？<br  />
+实参strHello传入函数GetMemory2时，传入的是存放指针strHello的地址addr_strHello,编译器为其生成临时副本_addr_strHello,<br  />
+并且 _addr_strHello = addr_strHello = 0x000f1850(可能是任意非NULL地址).<br  />
+在函数内部，程序修改了 _addr_strHello 所指向的内存地址，因为二者都指向相同的地址，所以 addr_strHello所指向的地址也就会相应的改变。<br  />
+那么采用指针的指针这种方式就可以实现动态内存的传递了。 </p>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga1f667db8d76c5e8eb0514deb7d4715a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f667db8d76c5e8eb0514deb7d4715a9">&#9670;&nbsp;</a></span>GetMemory1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMemAlloc::GetMemory1 </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>错误的指针分配内存方法 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pStr</td><td>[in] a character pointer. </td></tr>
+    <tr><td class="paramname">num</td><td>[in] 分配空间大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void 没有返回值 </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658.html#ga232640334d146ddbd6cb5d0094d74cbb" title="GetMemory2 taking two arguments and returning void value.">GetMemory2(char **pStr, int num)</a>, <a class="el" href="class_c_mem_alloc.html#a2f6a7c3e2a770bebef90b698b6800902" title="GetMemory3 用返回值来传递动态内存。">GetMemory3(int num)</a> </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga1f667db8d76c5e8eb0514deb7d4715a9_icgraph.png" border="0" usemap="#group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga1f667db8d76c5e8eb0514deb7d4715a9_icgraph" alt=""/></div>
+<map name="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga1f667db8d76c5e8eb0514deb7d4715a9_icgraph" id="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga1f667db8d76c5e8eb0514deb7d4715a9_icgraph">
+<area shape="rect" title="错误的指针分配内存方法" alt="" coords="247,5,419,32"/>
+<area shape="rect" href="class_main_test.html#a417faf2a31fd1d12493cb636fc76892b" title=" " alt="" coords="5,5,199,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga232640334d146ddbd6cb5d0094d74cbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga232640334d146ddbd6cb5d0094d74cbb">&#9670;&nbsp;</a></span>GetMemory2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CMemAlloc::GetMemory2 </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>pStr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GetMemory2 taking two arguments and returning void value. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pStr</td><td>指向指针的指针. </td></tr>
+    <tr><td class="paramname">num</td><td>an integer argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void </dd></dl>
+<dl class="section see"><dt>参见</dt><dd><a class="el" href="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658.html#ga1f667db8d76c5e8eb0514deb7d4715a9" title="错误的指针分配内存方法">GetMemory1(char *pStr, int num)</a>, <a class="el" href="class_c_mem_alloc.html#a2f6a7c3e2a770bebef90b698b6800902" title="GetMemory3 用返回值来传递动态内存。">GetMemory3(int num)</a> </dd></dl>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga232640334d146ddbd6cb5d0094d74cbb_icgraph.png" border="0" usemap="#group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga232640334d146ddbd6cb5d0094d74cbb_icgraph" alt=""/></div>
+<map name="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga232640334d146ddbd6cb5d0094d74cbb_icgraph" id="group___xE4_xBA_x86_xE8_xA7_xA3_xE6_x8C_x87_xE9_x92_x88_xE5_x8F_x82_xE6_x95_xB0_xE4_xBC_xA0_xE9_8baa79cae2acf3ca16238bce6bd4a658_ga232640334d146ddbd6cb5d0094d74cbb_icgraph">
+<area shape="rect" title="GetMemory2 taking two arguments and returning void value." alt="" coords="247,5,419,32"/>
+<area shape="rect" href="class_main_test.html#a417faf2a31fd1d12493cb636fc76892b" title=" " alt="" coords="5,5,199,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 14日 星期五 13:44:09 , 为 firemail使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

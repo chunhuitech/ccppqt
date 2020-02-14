@@ -1,0 +1,6 @@
+<map id="MainTest::case2Memoryalloc" name="MainTest::case2Memoryalloc">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,199,83"/>
+<area shape="rect" id="node2" href="$group___xE5_xBB_xBA_xE8_xAE_xAE85.html#ga1f667db8d76c5e8eb0514deb7d4715a9" title="错误的指针分配内存方法" alt="" coords="247,5,419,32"/>
+<area shape="rect" id="node3" href="$group___xE5_xBB_xBA_xE8_xAE_xAE85.html#ga232640334d146ddbd6cb5d0094d74cbb" title="GetMemory2 taking two arguments and returning void value." alt="" coords="247,56,419,83"/>
+<area shape="rect" id="node4" href="$class_c_mem_alloc.html#a2f6a7c3e2a770bebef90b698b6800902" title="GetMemory3 用返回值来传递动态内存。" alt="" coords="247,107,419,133"/>
+</map>

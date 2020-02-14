@@ -1,0 +1,6 @@
+<map id="PointerTest::case2Memoryalloc" name="PointerTest::case2Memoryalloc">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,212,83"/>
+<area shape="rect" id="node2" href="$class_c_mem_alloc.html#a1f667db8d76c5e8eb0514deb7d4715a9" title="GetMemory1 taking two arguments and returning void value." alt="" coords="260,5,432,32"/>
+<area shape="rect" id="node3" href="$class_c_mem_alloc.html#a232640334d146ddbd6cb5d0094d74cbb" title="GetMemory2 taking two arguments and returning void value." alt="" coords="260,56,432,83"/>
+<area shape="rect" id="node4" href="$class_c_mem_alloc.html#a2f6a7c3e2a770bebef90b698b6800902" title="GetMemory3 用返回值来传递动态内存。" alt="" coords="260,107,432,133"/>
+</map>

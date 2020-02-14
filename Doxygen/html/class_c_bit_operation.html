@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>firemail: CBitOperation类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">firemail
+   &#160;<span id="projectnumber">master</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li class="current"><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>类列表</span></a></li>
+      <li><a href="classes.html"><span>类索引</span></a></li>
+      <li><a href="hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="class_c_bit_operation-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">CBitOperation类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>位操作相关功能测试类  
+ <a href="class_c_bit_operation.html#details">更多...</a></p>
+
+<p><code>#include &quot;<a class="el" href="cbitoperation_8h_source.html">CBitOperation.h</a>&quot;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:aad835cbb2a39cd2947b2863b25e04bd5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5">WeekEnum</a> { <br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5ad3baa1c3ffbad7e6bbe30c0c0f006e8c">Sun</a>, 
+<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5a9ff133fc4642c4ecf1dc8dbfccda7be9">Mon</a>, 
+<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5a2048ee189d387a5465d175f728e9466f">Tue</a>, 
+<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5a3d4e212bdf49e48c2341863790327a34">Wed</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5a2c14d2da0822ac3c1a8bfbd4cc0f738d">Thu</a>, 
+<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5a02494dfa42a44a39b6c78fb9ec7ff04d">Fri</a>, 
+<a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5a722a88388b581d511ecf0e5add4e65af">Sat</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aad835cbb2a39cd2947b2863b25e04bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">星期枚举定义  <a href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5">更多...</a><br /></td></tr>
+<tr class="separator:aad835cbb2a39cd2947b2863b25e04bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a2624fcd023a21e1abb590447379cf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cf">ConnectionType</a> { <br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfad54d99fc5686c0cf05e76d2a6d0a0943">ConnectionTypeClear</a> = 1 &lt;&lt; 0, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfac86a678df91307185b370d023795aac0">ConnectionTypeStartTLS</a> = 1 &lt;&lt; 1, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfaaa178be4839102c1865f0b67b912f37d">ConnectionTypeTLS</a> = 1 &lt;&lt; 2, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa4eb35a3bf34e6b0240e763c0adb0e166">ConnectionType3</a> = 1 &lt;&lt; 3, 
+<br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfae2abca8b618a0cd09ba097551757cac4">ConnectionType4</a> = 1 &lt;&lt; 4, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa14bb3c8e5c63cdf7f3e420f2af57daa1">ConnectionType5</a> = 1 &lt;&lt; 5, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa1afcd99b994266c54caecc5ab94f7df8">ConnectionType6</a> = 1 &lt;&lt; 6, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa225cfce1287dce0aefd7da4df944b199">ConnectionType7</a> = 1 &lt;&lt; 7, 
+<br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfaa46165087ef9936612b97babb33fbe42">ConnectionType8</a> = 1 &lt;&lt; 8, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfab6ba3fa270901d72ff5b6ac5c96367f0">ConnectionType9</a> = 1 &lt;&lt; 9, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa0f2337a4e2019d0ce8f09fa2e397735d">ConnectionType10</a> = 1 &lt;&lt; 10, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa8d1da07ab651425736666d59f740b76a">ConnectionType11</a> = 1 &lt;&lt; 11, 
+<br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfaaa921e2f7d2382a1c6499334713f01d4">ConnectionType12</a> = 1 &lt;&lt; 12, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfaeaa54a3fde0556c29893659c472fe8c2">ConnectionType13</a> = 1 &lt;&lt; 13, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfae6e54902eaf03969296d2419b4dd440d">ConnectionType14</a> = 1 &lt;&lt; 14, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa8b4e086e4bbf455651400fc2f039d6ff">ConnectionType15</a> = 1 &lt;&lt; 15, 
+<br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa1df19ebd025d9676384253063cb00dad">ConnectionType16</a> = 1 &lt;&lt; 16, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa8a89d250262df166433e4951ac6dab44">ConnectionType17</a> = 1 &lt;&lt; 17, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa0850b0038f5373882b584c38d1c5cdf7">ConnectionType18</a> = 1 &lt;&lt; 18, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa078e9b219a5bf359b0f9c43cc5b48b8f">ConnectionType19</a> = 1 &lt;&lt; 19, 
+<br />
+&#160;&#160;<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa24e364bba274afc40aceb95942fb0eae">ConnectionType20</a> = 1 &lt;&lt; 20, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa1e2747e4f94195d4d3034560d14089cf">ConnectionType21</a> = 1 &lt;&lt; 21, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfa96cea5548a6b4cea4c77855ffddfc004">ConnectionType22</a> = 1 &lt;&lt; 22, 
+<a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cfae2b9efcad437a12d261e0e6fe5e3086f">ConnectionType23</a> = 1 &lt;&lt; 23
+<br />
+ }</td></tr>
+<tr class="memdesc:aa4a2624fcd023a21e1abb590447379cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接类型定义  <a href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cf">更多...</a><br /></td></tr>
+<tr class="separator:aa4a2624fcd023a21e1abb590447379cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a6aae002f68381b411f3829d678712812"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bit_operation.html#a6aae002f68381b411f3829d678712812">CBitOperation</a> ()</td></tr>
+<tr class="separator:a6aae002f68381b411f3829d678712812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef1a535862eee969b1e0f42092f75e49"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bit_operation.html#aef1a535862eee969b1e0f42092f75e49">PrintEnumValue</a> ()</td></tr>
+<tr class="separator:aef1a535862eee969b1e0f42092f75e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9292e1d32a369f5fab4f2ef39c63b06e"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bit_operation.html#a9292e1d32a369f5fab4f2ef39c63b06e">decTobin</a> (int nDecimal)</td></tr>
+<tr class="separator:a9292e1d32a369f5fab4f2ef39c63b06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc7b25d99ca2e8e139d5ff7cfc5683da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_bit_operation.html#acc7b25d99ca2e8e139d5ff7cfc5683da">JudgeSystem</a> ()</td></tr>
+<tr class="separator:acc7b25d99ca2e8e139d5ff7cfc5683da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>位操作相关功能测试类 </p>
+<p>1-通过移位定义枚举值<br  />
+2-打印枚举值<br  />
+</p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="aa4a2624fcd023a21e1abb590447379cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a2624fcd023a21e1abb590447379cf">&#9670;&nbsp;</a></span>ConnectionType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_c_bit_operation.html#aa4a2624fcd023a21e1abb590447379cf">CBitOperation::ConnectionType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>连接类型定义 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfad54d99fc5686c0cf05e76d2a6d0a0943"></a>ConnectionTypeClear&#160;</td><td class="fielddoc"><p>00000001 0x00000001 0b000000000000000000000001 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfac86a678df91307185b370d023795aac0"></a>ConnectionTypeStartTLS&#160;</td><td class="fielddoc"><p>00000002 0x00000002 0b000000000000000000000010 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfaaa178be4839102c1865f0b67b912f37d"></a>ConnectionTypeTLS&#160;</td><td class="fielddoc"><p>00000004 0x00000004 0b000000000000000000000100 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa4eb35a3bf34e6b0240e763c0adb0e166"></a>ConnectionType3&#160;</td><td class="fielddoc"><p>00000008 0x00000008 0b000000000000000000001000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfae2abca8b618a0cd09ba097551757cac4"></a>ConnectionType4&#160;</td><td class="fielddoc"><p>00000016 0x00000010 0b000000000000000000010000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa14bb3c8e5c63cdf7f3e420f2af57daa1"></a>ConnectionType5&#160;</td><td class="fielddoc"><p>00000032 0x00000020 0b000000000000000000100000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa1afcd99b994266c54caecc5ab94f7df8"></a>ConnectionType6&#160;</td><td class="fielddoc"><p>00000064 0x00000040 0b000000000000000001000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa225cfce1287dce0aefd7da4df944b199"></a>ConnectionType7&#160;</td><td class="fielddoc"><p>00000128 0x00000080 0b000000000000000010000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfaa46165087ef9936612b97babb33fbe42"></a>ConnectionType8&#160;</td><td class="fielddoc"><p>00000256 0x00000100 0b000000000000000100000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfab6ba3fa270901d72ff5b6ac5c96367f0"></a>ConnectionType9&#160;</td><td class="fielddoc"><p>00000512 0x00000200 0b000000000000001000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa0f2337a4e2019d0ce8f09fa2e397735d"></a>ConnectionType10&#160;</td><td class="fielddoc"><p>00001024 0x00000400 0b000000000000010000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa8d1da07ab651425736666d59f740b76a"></a>ConnectionType11&#160;</td><td class="fielddoc"><p>00002048 0x00000800 0b000000000000100000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfaaa921e2f7d2382a1c6499334713f01d4"></a>ConnectionType12&#160;</td><td class="fielddoc"><p>00004096 0x00001000 0b000000000001000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfaeaa54a3fde0556c29893659c472fe8c2"></a>ConnectionType13&#160;</td><td class="fielddoc"><p>00008192 0x00002000 0b000000000010000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfae6e54902eaf03969296d2419b4dd440d"></a>ConnectionType14&#160;</td><td class="fielddoc"><p>00016384 0x00004000 0b000000000100000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa8b4e086e4bbf455651400fc2f039d6ff"></a>ConnectionType15&#160;</td><td class="fielddoc"><p>00032768 0x00008000 0b000000001000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa1df19ebd025d9676384253063cb00dad"></a>ConnectionType16&#160;</td><td class="fielddoc"><p>00065536 0x00010000 0b000000010000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa8a89d250262df166433e4951ac6dab44"></a>ConnectionType17&#160;</td><td class="fielddoc"><p>00131072 0x00020000 0b000000100000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa0850b0038f5373882b584c38d1c5cdf7"></a>ConnectionType18&#160;</td><td class="fielddoc"><p>00262144 0x00040000 0b000001000000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa078e9b219a5bf359b0f9c43cc5b48b8f"></a>ConnectionType19&#160;</td><td class="fielddoc"><p>00524288 0x00080000 0b000010000000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa24e364bba274afc40aceb95942fb0eae"></a>ConnectionType20&#160;</td><td class="fielddoc"><p>01048576 0x00100000 0b000100000000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa1e2747e4f94195d4d3034560d14089cf"></a>ConnectionType21&#160;</td><td class="fielddoc"><p>02097152 0x00200000 0b001000000000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfa96cea5548a6b4cea4c77855ffddfc004"></a>ConnectionType22&#160;</td><td class="fielddoc"><p>04194304 0x00400000 0b010000000000000000000000 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa4a2624fcd023a21e1abb590447379cfae2b9efcad437a12d261e0e6fe5e3086f"></a>ConnectionType23&#160;</td><td class="fielddoc"><p>08388608 0x00800000 0b100000000000000000000000 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aad835cbb2a39cd2947b2863b25e04bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad835cbb2a39cd2947b2863b25e04bd5">&#9670;&nbsp;</a></span>WeekEnum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_c_bit_operation.html#aad835cbb2a39cd2947b2863b25e04bd5">CBitOperation::WeekEnum</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>星期枚举定义 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5ad3baa1c3ffbad7e6bbe30c0c0f006e8c"></a>Sun&#160;</td><td class="fielddoc"><p>星期天 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5a9ff133fc4642c4ecf1dc8dbfccda7be9"></a>Mon&#160;</td><td class="fielddoc"><p>星期一 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5a2048ee189d387a5465d175f728e9466f"></a>Tue&#160;</td><td class="fielddoc"><p>星期二 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5a3d4e212bdf49e48c2341863790327a34"></a>Wed&#160;</td><td class="fielddoc"><p>星期三 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5a2c14d2da0822ac3c1a8bfbd4cc0f738d"></a>Thu&#160;</td><td class="fielddoc"><p>星期四 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5a02494dfa42a44a39b6c78fb9ec7ff04d"></a>Fri&#160;</td><td class="fielddoc"><p>星期五 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aad835cbb2a39cd2947b2863b25e04bd5a722a88388b581d511ecf0e5add4e65af"></a>Sat&#160;</td><td class="fielddoc"><p>星期六 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a6aae002f68381b411f3829d678712812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aae002f68381b411f3829d678712812">&#9670;&nbsp;</a></span>CBitOperation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CBitOperation::CBitOperation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a9292e1d32a369f5fab4f2ef39c63b06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9292e1d32a369f5fab4f2ef39c63b06e">&#9670;&nbsp;</a></span>decTobin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString CBitOperation::decTobin </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nDecimal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_bit_operation_a9292e1d32a369f5fab4f2ef39c63b06e_icgraph.png" border="0" usemap="#class_c_bit_operation_a9292e1d32a369f5fab4f2ef39c63b06e_icgraph" alt=""/></div>
+<map name="class_c_bit_operation_a9292e1d32a369f5fab4f2ef39c63b06e_icgraph" id="class_c_bit_operation_a9292e1d32a369f5fab4f2ef39c63b06e_icgraph">
+<area shape="rect" title=" " alt="" coords="411,13,575,39"/>
+<area shape="rect" href="class_c_bit_operation.html#aef1a535862eee969b1e0f42092f75e49" title=" " alt="" coords="191,5,363,47"/>
+<area shape="rect" href="class_main_test.html#a5d89de7904958478852bfb1d7fc347ed" title=" " alt="" coords="5,13,143,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acc7b25d99ca2e8e139d5ff7cfc5683da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc7b25d99ca2e8e139d5ff7cfc5683da">&#9670;&nbsp;</a></span>JudgeSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CBitOperation::JudgeSystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef1a535862eee969b1e0f42092f75e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef1a535862eee969b1e0f42092f75e49">&#9670;&nbsp;</a></span>PrintEnumValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CBitOperation::PrintEnumValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_cgraph.png" border="0" usemap="#class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_cgraph" alt=""/></div>
+<map name="class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_cgraph" id="class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,177,47"/>
+<area shape="rect" href="class_c_bit_operation.html#a9292e1d32a369f5fab4f2ef39c63b06e" title=" " alt="" coords="225,13,389,39"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_icgraph.png" border="0" usemap="#class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_icgraph" alt=""/></div>
+<map name="class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_icgraph" id="class_c_bit_operation_aef1a535862eee969b1e0f42092f75e49_icgraph">
+<area shape="rect" title=" " alt="" coords="191,5,363,47"/>
+<area shape="rect" href="class_main_test.html#a5d89de7904958478852bfb1d7fc347ed" title=" " alt="" coords="5,13,143,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>F:/github/chunhuitech/ccppqt/MyTestPros/<a class="el" href="cbitoperation_8h_source.html">cbitoperation.h</a></li>
+<li>F:/github/chunhuitech/ccppqt/MyTestPros/<a class="el" href="cbitoperation_8cpp.html">cbitoperation.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2020年 二月 14日 星期五 16:48:36 , 为 firemail使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

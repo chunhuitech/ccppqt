@@ -8,10 +8,15 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    pointertest.cpp \
+    maintest.cpp \
+    cbitoperation.cpp \
+    cmemalloc.cpp \
     swapdata.cpp
 
 HEADERS += \
-    pointertest.h \
-    swapdata.h
+    maintest.h \
+    cbitoperation.h \
+    cmemalloc.h \
+    swapdata.h \
+    define.h
 

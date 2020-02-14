@@ -1,4 +1,4 @@
-#ifndef SWAPDATA_H
+﻿#ifndef SWAPDATA_H
 #define SWAPDATA_H
 
 
