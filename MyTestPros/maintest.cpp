@@ -23,6 +23,13 @@ void MainTest::shiftOper()
     QVERIFY(bo.PrintEnumValue() == 1);
 }
 
+void MainTest::unicodeTest()
+{
+    int xx = 0xabcd;
+    qDebug() << &xx;
+
+}
+
 
 void MainTest::case1Swapdata1()
 {

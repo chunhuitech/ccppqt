@@ -30,6 +30,9 @@ private slots:
     void shiftOper();
     /** @} 内存操作组 */
 
+    //测试Unicode编码规则
+    void unicodeTest();
+
 };
 
 #endif // BITTEST_H
